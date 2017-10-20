@@ -22,7 +22,3 @@ def getTweets():
     unfilteredTweet = unPickleBuddy()
     niceTweet = cleanTweet(unfilteredTweet)
     return niceTweet
-
-
-
-# print (getTweets())

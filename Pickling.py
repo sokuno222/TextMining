@@ -8,6 +8,7 @@ from TwitterKeys import *
 def PickleBuddy():
     files = os.listdir(filePath)  # make a list of all the files that already exist
     if not "cachedData.pickle" in files:
+        #setting up api using twitter key info from TwitterKey.py
         api = twitter.Api(consumer_key=CONSUMER_KEY,
                           consumer_secret=CONSUMER_SECRET,
                           access_token_key=ACCESS_TOKEN_KEY,
@@ -18,17 +19,7 @@ def PickleBuddy():
         pickles.close
 
 def unPickleBuddy():
+    ultimateUnPickle = []
     unpickles = open(filePath+'/cachedData.pickle', 'rb')
     untest = pickle.load(unpickles)
     return untest
-
-
-
-
-
-
-PickleBuddy()
-unPickleBuddy()
-  #try:
-    #cache = open('cachedData.txt')
-  #except:

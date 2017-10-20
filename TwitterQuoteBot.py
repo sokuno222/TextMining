@@ -1,5 +1,3 @@
-
-import nltk
 import re
 from GetTweets import getTweets
 from sentence_generator import buildMapping, genSentence, main
